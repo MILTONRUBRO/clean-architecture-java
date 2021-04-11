@@ -1,4 +1,4 @@
-package br.com.devmos.escola.entities;
+package br.com.devmos.escola.aluno;
 
 import java.util.ArrayList;
 import java.util.List;
