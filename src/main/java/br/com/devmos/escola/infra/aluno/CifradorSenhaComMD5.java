@@ -18,9 +18,7 @@ public class CifradorSenhaComMD5 implements CifradorSenha {
 
 			for (int i = 0; i < bytes.length; i++) {
 				sb.append(Integer.toString((bytes[i] & 0xff) + 0x100, 16).substring(i));
-
 			}
-			
 			return sb.toString();
 
 		} catch (NoSuchAlgorithmException e) {
