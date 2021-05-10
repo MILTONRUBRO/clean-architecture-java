@@ -18,6 +18,9 @@ public class Aluno {
 	}
 
 	public void adicionarTelefone(Telefone telefone) {
+		if(telefones.size() == 2) {
+			throw new IllegalArgumentException("Conta já possui 2 telefones cadastrados");
+		}
 		this.telefones.add(telefone);
 	}
 
