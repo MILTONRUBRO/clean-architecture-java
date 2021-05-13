@@ -7,7 +7,7 @@ public class LogDeAlunoMatriculado {
 	private static final Logger logger = LoggerFactory.getLogger(LogDeAlunoMatriculado.class);
 
 	public void reageAo(AlunoMatriculado evento) {
-		logger.info("Aluno com CPF " + evento.getCpfAluno().getNumero() + " em " + evento.getMomento());
+		logger.info("Aluno com CPF " + evento.getCpfAluno().getNumero() + " se matriculou em " + evento.getMomento());
 	}
 
 }
