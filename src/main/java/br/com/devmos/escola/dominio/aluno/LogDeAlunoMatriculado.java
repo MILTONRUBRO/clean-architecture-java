@@ -3,11 +3,19 @@ package br.com.devmos.escola.dominio.aluno;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class LogDeAlunoMatriculado {
+import br.com.devmos.escola.dominio.Evento;
+
+public class LogDeAlunoMatriculado extends Ouvinte{
 	private static final Logger logger = LoggerFactory.getLogger(LogDeAlunoMatriculado.class);
 
-	public void reageAo(AlunoMatriculado evento) {
-		logger.info("Aluno com CPF " + evento.getCpfAluno().getNumero() + " se matriculou em " + evento.getMomento());
+	@Override
+	public void reageAo(Evento evento) {
+		logger.info("Aluno com CPF " + ((AlunoMatriculado) evento).getCpfAluno().getNumero() + " se matriculou em " + ((AlunoMatriculado) evento).getMomento());
+	}
+
+	@Override
+	protected boolean deveProcessar(Evento evento) {
+		return evento instanceof AlunoMatriculado;
 	}
 
 }
