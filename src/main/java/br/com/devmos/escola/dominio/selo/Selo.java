@@ -29,7 +29,6 @@ public class Selo {
 
 
 	public Selo(CPF cpfAluno, String selo) {
-		super();
 		this.cpfAluno = cpfAluno;
 		this.selo = selo;
 	}
